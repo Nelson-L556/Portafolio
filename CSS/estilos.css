@@ -390,6 +390,7 @@ img {
     .acerca__grid{
         grid-template-columns: repeat(2, 1fr);
         column-gap: 5rem;
+        align-items: start;
     }
 }
 
@@ -441,3 +442,44 @@ img {
     }
 }
 
+/*? Habilidades  */
+.habilidad{
+    position: relative;
+}
+
+.habilidad__titulo{
+    color: var(--secundario);
+    margin-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+    .habilidad__titulo{
+        font-size: 3.5rem;
+    }
+}
+
+.habilidades__grid{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .habilidades__grid{
+        grid-template-columns:  1fr;
+        column-gap: 2rem;
+    }
+}
+
+@media (min-width: 990px) {
+    .habilidades__grid{
+        grid-template-columns:  repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+.habilidades__card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -449,6 +449,51 @@ img {
     }
 }
 
+.acerca__flex{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .acerca__flex{
+        flex-direction: row;
+        gap: 0rem;
+    }
+}
+
+.acerca__btn{
+    width: 19rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secundario);
+    margin: 2rem auto;
+    text-align: center;
+    transition-property: transform, background-color;
+    transition-duration: .3s;
+    font-size: 2rem;
+    color: var(--negro);
+    position: relative;
+    border-radius: 5px;
+}
+
+.acerca__btn:hover{
+    background-color: #648214;
+    transform: scale(1.2);
+    color: var(--blanco);
+}
+
+.acerca__icono{
+    margin-right: 1rem;
+    font-size: 3rem;
+}
+
 /*? Habilidades  */
 .habilidades{
     position: relative;

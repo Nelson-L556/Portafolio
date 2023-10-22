@@ -128,6 +128,16 @@ img {
     }
 }
 
+@media (min-width: 990px) {
+    .header__navegacion{
+        background: var(--principal);
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0 1rem;
+    }
+}
+
 .header__link{
     color: var(--blanco);
     font-size: 2rem;
@@ -181,7 +191,18 @@ img {
 @media (min-width: 768px) {
     .header__imagen{
         padding-bottom: 1rem;
+        margin: 1rem 0 ;
+        width: 20vw;
+        margin-right: 6rem;
+    }
+}
+
+@media (min-width: 990px) {
+    .header__imagen{
+        padding-bottom: 1rem;
         margin-top: 1rem;
+        width: 10vw;
+        margin-right: 10rem;
     }
 }
 
@@ -636,6 +657,7 @@ img {
     font-size: 5rem;
     margin: 2rem 0;
     width: 100vw;
+    color: var(--principal);
 }
 
 
@@ -715,4 +737,148 @@ img {
 .servicios__descripcion{
     font-size: 1.7rem;
     padding: 0 2rem;
+}
+
+/*? Formación  */
+
+.estudios__titulo{
+    color: var(--principal);
+    text-align: center;
+    position: relative;
+}
+
+.estudios__titulo::before{
+    content: "";
+    width: 29rem;
+    height: .5rem;
+    position: absolute;
+    background-color: var(--secundario);
+    top: 6rem;
+}
+
+.estudios__grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 5rem;
+}
+
+@media (min-width: 768px) {
+    .estudios__grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+.estudios__card{
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    transition: transform .3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.estudios__card:hover{
+    background-color: #464646;
+    transform: scale(1.1);
+}
+
+.estudios__img{
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+}
+
+
+@media (min-width: 768px) {
+    .estudios__texto{
+        transition: all .3s;
+    }
+
+    .estudios__card:hover:nth-child(1),
+    .estudios__card:hover:nth-child(3){
+        transform: translateX(-3rem);
+    }
+
+    .estudios__card:hover:nth-child(2),
+    .estudios__card:hover:nth-child(4){
+        transform: translateX(3rem);
+    }
+}
+
+@media (min-width: 990px) {
+    .estudios__texto{
+        transition: all .3s;
+    }
+
+    .estudios__card:hover:nth-child(1),
+    .estudios__card:hover:nth-child(3){
+        transform: translateX(-10rem);
+    }
+
+    .estudios__card:hover:nth-child(2),
+    .estudios__card:hover:nth-child(4){
+        transform: translateX(10rem);
+    }
+}
+
+.estudios__imagen{
+    width: 90%;
+    height: 90%;
+    margin-top: 1rem;
+}
+
+.estudios__titular{
+    text-align: center;
+    font-size: 2.5rem;
+    padding: .5rem 2rem;
+}
+
+.estudios__descripcion{
+    font-size: 1.7rem;
+    padding: .5rem 2rem;
+}
+
+@media (min-width: 768px) {
+    .estudios__descripcion{
+        font-size: 1.8rem;
+        padding: .5rem 2rem;
+    }
+}
+
+@media (min-width: 990px) {
+    .estudios__descripcion{
+        font-size: 2rem;
+        padding: .5rem 2.5rem;
+    }
+}
+
+.estudios__btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+    height: 5rem;
+    background-color: transparent;
+    border: 1px solid var(--secundario);
+    color: var(--blanco);
+    margin: 2rem auto;
+    transition-property: background-color, color, transform;
+    transition-duration: .3s;
+}
+
+@media (min-width: 768px) {
+    .estudios__btn{
+        width: 50%;
+        font-size: 2rem;
+    }
+}
+
+.estudios__btn:hover{
+    background-color: var(--secundario);
+    color: var(--negro);
+    transform: scale(1.1);
 }

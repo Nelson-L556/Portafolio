@@ -115,6 +115,11 @@ img {
     display: none;
 }
 
+
+.oculto{
+    display: none;
+}
+
 @media (min-width: 768px) {
     .header__navegacion{
         background: var(--principal);
@@ -122,6 +127,27 @@ img {
         justify-content: space-between;
         display: flex;
     }
+}
+
+.header__hambuerguesa,
+.header__cerrar{
+    color: black;
+    height: 4rem;
+    cursor: pointer;
+    transition: transform, .3s;
+}
+
+.header__cerrar{
+    display: none;
+}
+
+.visible{
+    display: flex;
+}
+
+.header__hambuerguesa:hover,
+.header__cerrar:hover{
+    transform: scale(1.2);
 }
 
 @media (min-width: 990px) {
